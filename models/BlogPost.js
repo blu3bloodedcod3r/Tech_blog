@@ -14,7 +14,7 @@ BlogPost.init(
             autoIncrement: true,
             allowNull: false
         },
-        pot_title: {
+        post_title: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -31,7 +31,11 @@ BlogPost.init(
             allowNull: false
         },
         comment: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            references: {
+                model: 'thoguhts',
+                key: 'id' 
+            }
         }
     },
     {
