@@ -2,10 +2,13 @@ const Article = require('./Article');
 const BlogPost = require('./BlogPost');
 const Thoughts = require('./Thoughts');
 
-// Reader.hasOne(LibraryCard, {
-//   foreignKey: 'reader_id',
-//   onDelete: 'CASCADE',
-// });
+
+//template from in-class exercises; replace with appropriate models and variables
+
+BlogPost.hasOne(Article, {
+  foreignKey: 'reader_id',
+  onDelete: 'CASCADE',
+});
 
 // LibraryCard.belongsTo(Reader, {
 //   foreignKey: 'reader_id',
