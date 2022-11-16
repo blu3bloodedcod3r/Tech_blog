@@ -1,11 +1,11 @@
-const Article = require('./Article');
+const User = require('./User');
 const BlogPost = require('./BlogPost');
-const Thoughts = require('./Thoughts');
+const Comment = require('./Comment');
 
 
 //template from in-class exercises; replace with appropriate models and variables
 
-BlogPost.hasOne(Article, {
+BlogPost.hasOne(User, {
   foreignKey: 'reader_id',
   onDelete: 'CASCADE',
 });
@@ -23,4 +23,4 @@ BlogPost.hasOne(Article, {
 //   foreignKey: 'reader_id'
 // })
 
-module.exports = { Article, BlogPost, Thoughts };
+module.exports = { User, BlogPost, Comment };
