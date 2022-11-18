@@ -12,7 +12,7 @@ const dbPostData = await  Post .findAll({
 const posts = dbPostData.map(post => post.get({ plain:true }));
 console.log(posts);
 //respond with template to render alnong with data retreived
-res.render('homepage', { posts })
+res.render('homepage', { posts, loggedIn: req.session.loggedIn })
 } catch (err) {
     res.status(500).json(err);
 }

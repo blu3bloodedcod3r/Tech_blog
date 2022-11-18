@@ -24,6 +24,9 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Dashboard</a>
+        {{#if loggedIn}}
+        <a class="nav-link" href="/logout">Log Out</a>
+        {{}}
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/login">Log In</a>

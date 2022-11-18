@@ -1,5 +1,4 @@
 require('dotenv').config();
-
 const Sequelize = require('sequelize');
 
 //ternary expression that asks environment for HEROKU(JAWSDB) boiler plate
