@@ -1,4 +1,5 @@
-[
+const BlogPost = require('../models');
+const blogData = [
     {
        "name": "Nadia Lester",
        "post_title": "Today's Children",
@@ -22,5 +23,9 @@
         "creator_username": "tPicklz118520",
         "date_created":"09/11/2019",
         "comment": ""  
-     }
-]
+     },
+];
+
+const seedBlog = () => BlogPost.bulkCreate(blogData);
+
+module.exports = seedBlog;

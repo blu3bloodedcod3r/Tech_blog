@@ -2,25 +2,28 @@ const User = require('./User');
 const BlogPost = require('./BlogPost');
 const Comment = require('./Comment');
 
-
-//template from in-class exercises; replace with appropriate models and variables
-
 BlogPost.hasOne(User, {
-  foreignKey: 'reader_id',
+  foreignKey: 'username',
   onDelete: 'CASCADE',
 });
 
-// LibraryCard.belongsTo(Reader, {
-//   foreignKey: 'reader_id',
-// });
+User.hasMany(BlogPost, {
+  foreignKey: 'username',
+  onDelete: 'CASCADE'
+});
 
-// Reader.hasMany(Book, {
-//   foreignKey: 'book_id',
-//   onDelete: 'CASCADE'
-// })
+Comment.belongsTo(User, {
+  foreignKey: 'username',
+  onDelete: 'CASCADE'
+})
 
-// Book.belongsTo(Reader, {
-//   foreignKey: 'reader_id'
-// })
+User.hasMany(Comment, {
+  foreignKey: 'creator_username',
+  onDelete: 'CASCADE'
+})
 
-module.exports = { User, BlogPost, Comment };
+module.exports = {
+  User,
+  BlogPost,
+  Comment
+}

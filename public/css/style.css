@@ -1,3 +1,10 @@
 body {
     background-color: lightblue;
+    color: dodgerblue
+}
+
+.sidenav {
+    margin: 5px;
+    padding: 2px;
+    align-content: center;
 }

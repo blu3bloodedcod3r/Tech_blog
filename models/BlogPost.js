@@ -3,9 +3,6 @@ const sequelize = require('../config/connection');
 
 class BlogPost extends Model {};
 
-// WHEN I click on an existing blog post
-// THEN I am presented with the post title, contents, post creator’s username, and date created for that post and have the option to leave a comment
-
 BlogPost.init(
     {
         id: {
@@ -22,8 +19,9 @@ BlogPost.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        creator_userName: {
+        creator_username: {
             type: DataTypes.STRING,
+            foreignKey: true,
             allowNull: false
         },
         date_created: {
@@ -33,7 +31,7 @@ BlogPost.init(
         comment: {
             type: DataTypes.STRING,
             references: {
-                model: 'thoguhts',
+                model: 'comment',
                 key: 'id' 
             }
         }
@@ -42,7 +40,7 @@ BlogPost.init(
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'blog_post'
+        modelName: 'BlogPost'
     }
 );
 
