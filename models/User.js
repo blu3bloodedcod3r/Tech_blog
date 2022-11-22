@@ -19,10 +19,12 @@ User.init(
         username: {
             type: DataTypes.STRING,
             allowNull: false,
+            foreignKey: true,
         },
         password: {
             type: DataTypes.STRING,
             allowNull: false,
+            onDelete: true,
             validate: {
                 len: [4]
             }
@@ -46,5 +48,14 @@ User.init(
         modelName: 'User'
     },
 );
+
+// const userData = async () => {
+//    const users = await User.bulkCreate(userData, {
+//         individualHooks: true,
+//         return: true
+// })
+// };
+
+// console.log(users);
 
 module.exports = User;

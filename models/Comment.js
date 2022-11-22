@@ -19,6 +19,8 @@ Comment.init(
         comment: {
             type: DataTypes.STRING,
             allowNull: false,
+            onDelete: true,
+            onUpdate: "CASCADE"
         }
     },
     {

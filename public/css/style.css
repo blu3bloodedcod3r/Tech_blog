@@ -1,10 +1,50 @@
-body {
-    background-color: lightblue;
-    color: dodgerblue
+:root {
+    --bgcdark: #03459b;
+    --bgclight: #7985ee;
+    --fcdark: #757572;
+    --fclight: #bbbab7;
 }
 
-.sidenav {
-    margin: 5px;
-    padding: 2px;
-    align-content: center;
+h1{
+    font-size: 4.5rem;
+}
+
+header {
+    background-color: var(--bgcdark);
+    height: 20vh;
+    color: var(--fclight);
+    font-size: 2.5rem;
+}
+
+body {
+    background-color: var(--bgclight);
+    /* font-family: 'Bigelow Rules', cursive; */
+    font-family: 'Mystery Quest', cursive;
+}
+
+
+.navcontainer {
+    background-color: var(--bgcdark);
+    height: 100vh;
+    position: absolute;
+}
+
+.links li {
+    margin: 3rem;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--fclight);
+    font-size: 1.5rem;
+}
+
+.card {
+    background-color: var(--bgclight);
+}
+
+.btn {
+    background-color: var(--bgcdark);
+    color: var(--fclight)
 }

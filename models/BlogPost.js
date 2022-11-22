@@ -13,23 +13,29 @@ BlogPost.init(
         },
         post_title: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            onUpdate: "CASCADE"
         },
         contents: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            onDelete: true,
+            onUpdate: "CASCADE"
         },
-        creator_username: {
+        username: {
             type: DataTypes.STRING,
+            primaryKey: true,
             foreignKey: true,
             allowNull: false
         },
         date_created: {
             type: DataTypes.DATE,
-            allowNull: false
+            allowNull: false,
+            onUpdate: "CASCADE"
         },
         comment: {
             type: DataTypes.STRING,
+            foreignKey: true,
             references: {
                 model: 'comment',
                 key: 'id' 
