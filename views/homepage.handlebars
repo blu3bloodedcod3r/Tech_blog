@@ -1,5 +1,11 @@
 {{#each posts}}
 
+{{#if loggedIn}}
+
+<p>logged In</p>
+
+{{/if}}
+
 {{!-- use this div as a partial {{> partial name}} --}}
 <div class="card" style="width: 18rem;">
   <div class="card-body">

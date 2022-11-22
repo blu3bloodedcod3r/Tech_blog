@@ -1,0 +1,22 @@
+[
+    {
+        "username": "manyHern",
+        "password": "nowmove1235"
+    },
+    {
+        "username": "johnhammerSchmidt",
+        "password": "whatever1258"
+    },
+    {
+        "username": "hawaiianTidal",
+        "password": "NickatNit502"
+    }
+];
+
+const userSeed = async () => {
+   const users = await User.bulkCreate(userData, {
+        individualHooks: true,
+        return: true
+})};
+
+console.log(users);
