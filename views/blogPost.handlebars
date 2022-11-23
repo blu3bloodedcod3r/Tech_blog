@@ -2,10 +2,7 @@
 
 {{#if loggedIn}}
 
-<p>logged In</p>
-
 {{/if}}
-<button type="button" class=" createPost btn btn-info">Create Post</button>
 
 {{!-- use this div as a partial {{> partial name}} --}}
 <div class="card" style="width: 18rem;">
@@ -17,5 +14,18 @@
   </div>
 </div>
 
+<div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text">{{title}}</span>
+  </div>
+  <textarea class="form-control" aria-label="newTitle"></textarea>
+</div>
+<div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text">With textarea</span>
+  </div> 
+  <textarea class="form-control" aria-label="With textarea"></textarea>
+</div>
 
+{{comment}}
 {{/each}}
