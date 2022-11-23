@@ -13,8 +13,13 @@ Comment.init(
         },
         username: {
             type: DataTypes.STRING,
-            forgeinKey: true,
+            foreignKey: true,
             allowNull: false
+        },
+        blog_post: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            foreignKey: true,
         },
         comment: {
             type: DataTypes.STRING,

@@ -7,6 +7,7 @@ class User extends Model {
         return bcrypt.compareSync(pw, this.password)
     }
 };
+//Can dataTypes.STRING be primaryKeys?
 
 User.init(
     {
@@ -19,7 +20,12 @@ User.init(
         username: {
             type: DataTypes.STRING,
             allowNull: false,
+            primaryKey: true,
             foreignKey: true,
+            references: {
+                model: 'comment',
+                key: 'username' 
+            }
         },
         password: {
             type: DataTypes.STRING,

@@ -7,7 +7,7 @@ BlogPost.init(
     {
         id: {
             type: DataTypes.INTEGER,
-            primaryKey: true,
+            // primaryKey: true,
             autoIncrement: true,
             allowNull: false
         },
@@ -25,7 +25,7 @@ BlogPost.init(
         username: {
             type: DataTypes.STRING,
             primaryKey: true,
-            foreignKey: true,
+            // foreignKey: true,
             allowNull: false
         },
         date_created: {
