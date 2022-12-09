@@ -1,16 +1,14 @@
 const router = require('express').Router();
-const BlogPost = require('../../models')
-const User = require('../../models')
+const {BlogPost, User, Comment} = require('../models')
 
 
 router.get('/', async (req, res) => {
+    console.log('in homeroute')
     try{
-        const dbPostData = await BlogPost.findAll({
-        include: [{model: BlogPost, through: User}]
-    });
+        const dbPostData = await BlogPost.findAll();
 
     const posts = dbPostData.map(post => post.get({ plain:true }));
-    console.log(posts);
+    console.log('homepage posts', posts);
 
     res.render('homepage', { posts, loggedIn: req.session.loggedIn });
     } catch (err) {

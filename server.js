@@ -26,7 +26,7 @@ const sess = {
 };
 
 app.use(session(sess));
-console.log(sess)
+// console.log(sess)
 
 
 const hbs = exphbs.create({ helpers });
