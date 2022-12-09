@@ -7,7 +7,7 @@ This project is a blog site that allows for creating, deleting and update postin
 - I wanted to hone in on my handlebars skills and create a blog site that would be eas to use.
 - I wanted to practice making a database and having the tables connect correctly so that the site is able to list my created blog and allow to eave comments on the postings of others
 - This solves the problem of having regulations on other blog sites and allows me to create any content I so please, within reason.
--I learned that I need a LOT more practice on this becuase I could not finish the assignment corrrectly on time. 
+-I learned that my connections were not being conncected correctly and received assistance to fix those connections.
 
 ## Installation
 
@@ -15,17 +15,12 @@ Don't forget to 'npm i' to install all dependencies
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-
 ![screenshot of video](readmescsh.png)
-
 
 ## Credits
 
 I worked with tutors, T.A's and instructor for help on this assignment, along with ASKBCS
+
 ## License
 
 MIT
