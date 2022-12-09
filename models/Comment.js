@@ -11,21 +11,25 @@ Comment.init(
             autoIncrement: true,
             allowNull: false,
         },
-        username: {
-            type: DataTypes.STRING,
-            foreignKey: true,
-            allowNull: false
-        },
-        blog_post: {
+        user_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            foreignKey: true,
+            references: {
+                model:'user',
+                key:'id'
+            }
+        },
+        post_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'blog_post',
+                key: 'id'
+            }
         },
         comment: {
             type: DataTypes.STRING,
             allowNull: false,
-            onDelete: true,
-            onUpdate: "CASCADE"
         }
     },
     {

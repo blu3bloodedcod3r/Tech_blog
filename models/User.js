@@ -19,18 +19,11 @@ User.init(
         },
         username: {
             type: DataTypes.STRING,
-            allowNull: false,
-            primaryKey: true,
-            foreignKey: true,
-            references: {
-                model: 'comment',
-                key: 'username' 
-            }
+            allowNull: false
         },
         password: {
             type: DataTypes.STRING,
             allowNull: false,
-            onDelete: true,
             validate: {
                 len: [4]
             }
@@ -51,7 +44,7 @@ User.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'User'
+        modelName: 'user'
     },
 );
 

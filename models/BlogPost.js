@@ -13,32 +13,18 @@ BlogPost.init(
         },
         post_title: {
             type: DataTypes.STRING,
-            allowNull: false,
-            onUpdate: "CASCADE"
+            allowNull: false
         },
         contents: {
             type: DataTypes.STRING,
-            allowNull: false,
-            onDelete: true,
-            onUpdate: "CASCADE"
-        },
-        username: {
-            type: DataTypes.STRING,
-            primaryKey: true,
-            foreignKey: true,
             allowNull: false
         },
-        date_created: {
-            type: DataTypes.DATE,
+        user_id: {
+            type: DataTypes.INTEGER,
             allowNull: false,
-            onUpdate: "CASCADE"
-        },
-        comment: {
-            type: DataTypes.STRING,
-            foreignKey: true,
             references: {
-                model: 'comment',
-                key: 'id' 
+                model: 'user',
+                key: 'id'
             }
         }
     },
@@ -46,7 +32,7 @@ BlogPost.init(
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'BlogPost'
+        modelName: 'blog_post'
     }
 );
 
