@@ -14,7 +14,7 @@ This project is a blog site that allows for creating, deleting and update postin
 Don't forget to 'npm i' to install all dependencies
 
 ## Usage
-
+Deployed Heroku link: https://floating-waters-46280.herokuapp.com/
 ![screenshot of video](readmescsh.png)
 
 ## Credits
