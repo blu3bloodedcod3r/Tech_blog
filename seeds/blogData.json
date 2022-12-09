@@ -1,26 +1,17 @@
 [
     {
-       "name": "Nadia Lester",
        "post_title": "Today's Children",
        "contents": "children, learning",
-       "creator_username": "NerdyGal256",
-       "date_created":"06/21/2006",
-       "comment": ""  
+       "user_id": 1
     },
     {
-        "name": "Boris Lanister",
         "post_title": "Elephants",
         "contents": "children, wildlife",
-        "creator_username": "wildlifeLuvr567",
-        "date_created":"09/18/2001",
-        "comment": ""  
+        "user_id": 2
      },
      {
-        "name": "Tommy Pickles",
         "post_title": "Life Errors",
         "contents": "learning",
-        "creator_username": "tPicklz118520",
-        "date_created":"09/11/2019",
-        "comment": ""  
+        "user_id": 3  
      }
 ]

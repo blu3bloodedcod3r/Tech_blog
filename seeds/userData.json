@@ -2,19 +2,16 @@
     {
         "id": 1,
         "username": "manyHern",
-        "email": "manny@email.com",
         "password": "nowmove1235"
     },
     {
         "id": 2,
         "username": "johnhammerSchmidt",
-        "email": "schmidt@email.com",
         "password": "whatever1258"
     },
     {
         "id": 3,
         "username": "hawaiianTidal",
-        "email": "tidalwave@email.com",
         "password": "NickatNit502"
     }
 ]

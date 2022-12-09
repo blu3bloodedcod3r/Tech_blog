@@ -3,7 +3,7 @@ const {BlogPost, User, Comment} = require('../models')
 
 
 router.get('/', async (req, res) => {
-    console.log('in homeroute')
+    console.log('req.session', req.session)
     try{
         const dbPostData = await BlogPost.findAll();
 
